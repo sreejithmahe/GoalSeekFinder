@@ -19,6 +19,7 @@ public class ProduceLoopCheck {
           double IR1  =
           (OP1-Lfee1)*IRPer1+TotMarTLP1/(1-TotMarTLP1)*IRPer1*(OP1-Lfee1);
           double Depre1 = Lfee1-TLP1-Margin1-IR1;
+          /* if required check 'Depre1' Value not going to be -Ve */
           double CB1 = OP1-Depre1;
 	      double FinalCB =  MN(CB1,Guess,ExpCB,NP);
           return FinalCB;
