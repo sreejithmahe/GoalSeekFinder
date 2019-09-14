@@ -23,18 +23,35 @@ public class GoalSeekController {
         double ExpCB = 55000;
         double Guess = OP1/NP;
         double FinalCB = 0.0;
+        boolean flag = false;
+        FinalCB = produceLoopCheck.M1(OP1,Guess,ExpCB,NP);
+    	if (ExpCB < FinalCB) {
+    		flag = true; // ++
+    	} else 	{
+    		flag = false; //--
+    	}
         for (int i = 1 ; i < 100000 ; i++) {
-			  
-        	Guess = Guess+0.01;
-					  System.out.println("-----------------------------------------------"+Guess+"<?>"+FinalCB);
-					  FinalCB = produceLoopCheck.M1(OP1,Guess,ExpCB,NP);
-		  if(ExpCB >= FinalCB) {
-			  System.out.println(i+"---------------------------------------------Break--"+Guess+"<=>"+FinalCB);
-			  break;
-		  }  if(ExpCB <= FinalCB)  {
-			  System.out.println("---Evide Camon-----------------");
-		  }
-		  System.out.println(i+"-->>>------"+Guess+"<->"+FinalCB);
+        	
+        	if(flag) {
+		          Guess = Guess+0.1;
+				  System.out.println("-----------------------------------------------"+Guess+"<?>"+FinalCB);
+				  FinalCB = produceLoopCheck.M1(OP1,Guess,ExpCB,NP);
+				  		if(ExpCB >= Math.round(FinalCB)) {
+				  			System.out.println(i+"---------------------------------------------Break--"+Guess+"<=>"+FinalCB);
+				  			break;
+				  		}  
+				  			System.out.println(i+"-->>>------"+Guess+"<->"+FinalCB);
+	            } else {
+  		       Guess = Guess-0.1;
+			       System.out.println("-----------------------------------------------"+Guess+"<?>"+FinalCB);
+			       FinalCB = produceLoopCheck.M1(OP1,Guess,ExpCB,NP);
+                       if(ExpCB <= Math.round(FinalCB)) {
+	                           System.out.println(i+"---------------------------------------------Break--"+Guess+"<=>"+FinalCB);
+	                         break;
+                     }
+                    System.out.println(i+"-->>>------"+Guess+"<->"+FinalCB);
+  	          }//else
+
 		 }
 	 return produceResult.M1(OP1,Guess,ExpCB,NP).toString();
  }
