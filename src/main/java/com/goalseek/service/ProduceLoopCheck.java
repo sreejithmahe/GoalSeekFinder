@@ -1,5 +1,8 @@
 package com.goalseek.service;
-
+/**
+ * @author sreejith.kizhakkayil
+ *
+ */
 import org.springframework.stereotype.Service;
 
 @Service
