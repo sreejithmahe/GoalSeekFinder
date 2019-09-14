@@ -13,8 +13,8 @@ public class ProduceResult {
           double MarPer1   = 0.01;
           double TLPPer1   = 0.01;
           double TotMarTLP1= MarPer1+TLPPer1;
-          double TotPer1   = IRPer1+MarPer1+TLPPer1;
-          double IndexPer1 = 0;
+         // double TotPer1   = IRPer1+MarPer1+TLPPer1;
+         // double IndexPer1 = 0;
           double TLP1  =
           (OP1-Lfee1)*TLPPer1+TotMarTLP1/(1-TotMarTLP1)*TLPPer1*(OP1-Lfee1);
           double Margin1  =
@@ -47,7 +47,7 @@ public class ProduceResult {
 	           double MarPerN   = 0.01;
 	           double TLPPerN   = 0.01;
 	           double TotMarTLPN= MarPerN+TLPPerN;
-	           double TotPerN   = IRPerN+MarPerN+TLPPerN;
+	          // double TotPerN   = IRPerN+MarPerN+TLPPerN;
 	           double IndexPerN = 0.01;
 	            LfeeN = Guess*(1+IndexPerN)*Math.pow((1+IndexPerN),Period-2);
 	            double TLPN  =

@@ -20,8 +20,5 @@ public class GoalSeekApp {
 public static void main(String[] args) {
 
 SpringApplication.run(GoalSeekApp.class, args);
-
- 
-    }
-
+   }
 }
