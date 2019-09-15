@@ -6,8 +6,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-
-import com.goalseek.dao.GoalSeekDao;
+import com.goalseek.dao.GoalSeekInDao;
+import com.goalseek.dao.GoalSeekOutDao;
 
 /**
  * @author sreejith.kizhakkayil
@@ -19,8 +19,8 @@ public class GoalseekService {
 	private ProduceLoopCheck produceLoopCheck;
 	@Autowired
 	private ProduceResult produceResult;
-	private List<GoalSeekDao> goalseekList = new ArrayList<GoalSeekDao>();
-	public String getGoalseek(GoalSeekDao gs) {
+	private List<GoalSeekOutDao> goalseekList = new ArrayList<GoalSeekOutDao>();
+	public List<GoalSeekOutDao> getGoalseek(GoalSeekInDao gs) {
         double OP1 = gs.getOperningBalance();
         double NP  = gs.getTotalNoPeriod();
         double ExpCB = gs.getExpectedClosingBalance();
@@ -48,12 +48,12 @@ public class GoalseekService {
                      }
               }
 		 }
-	 return produceResult.M1(OP1,Guess,ExpCB,NP).toString();
+	 return produceResult.M1(OP1,Guess,ExpCB,NP);
 	}
-	public void updateGoalseek(GoalSeekDao gs) {
+	public void updateGoalseek(GoalSeekOutDao gs) {
 		}
 
-	public List<GoalSeekDao> getResult(GoalSeekDao gs) {
+	public List<GoalSeekOutDao> getResult(GoalSeekOutDao gs) {
 		return goalseekList;
 	}
 }
