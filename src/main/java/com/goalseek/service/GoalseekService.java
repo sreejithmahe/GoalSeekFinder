@@ -21,11 +21,7 @@ public class GoalseekService {
 	private ProduceResult produceResult;
 	private List<GoalSeekOutDao> goalseekList = new ArrayList<GoalSeekOutDao>();
 	public List<GoalSeekOutDao> getGoalseek(GoalSeekInDao gs) {
-<<<<<<< HEAD
         double OP1 = gs.getOpeningBalance();
-=======
-        double OP1 = gs.getOperningBalance();
->>>>>>> branch 'master' of https://github.com/sreejithmahe/GoalSeekFinder.git
         double NP  = gs.getTotalNoPeriod();
         double ExpCB = gs.getExpectedClosingBalance();
         double Guess = OP1/NP;

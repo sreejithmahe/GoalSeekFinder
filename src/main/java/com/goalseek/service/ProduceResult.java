@@ -43,11 +43,7 @@ public class ProduceResult {
 		 * +"\n"+lfe+"\n");
 		 */
           GoalSeekOutDao gs = new GoalSeekOutDao();
-<<<<<<< HEAD
           gs.setOpeningBalance(Math.round(OP1));
-=======
-          gs.setOperningBalance(Math.round(OP1));
->>>>>>> branch 'master' of https://github.com/sreejithmahe/GoalSeekFinder.git
           gs.setDepreciation(Math.round(Depre1));
           gs.setClosingBalance(Math.round(CB1));
           gs.setInterestRate(Math.round(IR1));
@@ -81,11 +77,7 @@ public class ProduceResult {
 	           double DepreN = LfeeN-TLPN-MarginN-IRN;
 	           CBN = OPN-DepreN;
 	           GoalSeekOutDao gs = new GoalSeekOutDao();
-<<<<<<< HEAD
 	           gs.setOpeningBalance(Math.round(OPN));
-=======
-	           gs.setOperningBalance(Math.round(OPN));
->>>>>>> branch 'master' of https://github.com/sreejithmahe/GoalSeekFinder.git
 	           gs.setDepreciation(Math.round(DepreN));
 	           gs.setClosingBalance(Math.round(CBN));
 	           gs.setInterestRate(Math.round(IRN));
