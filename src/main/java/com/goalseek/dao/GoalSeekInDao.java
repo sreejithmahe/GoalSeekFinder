@@ -5,6 +5,7 @@ package com.goalseek.dao;
  */
 public class GoalSeekInDao {
 	
+<<<<<<< HEAD
 	private double openingBalance;
 	private double expectedClosingBalance;
 	private double totalNoPeriod;
@@ -39,6 +40,42 @@ public class GoalSeekInDao {
 
 	public void setOpeningBalance(double openingBalance) {
 		this.openingBalance = openingBalance;
+=======
+	private double operningBalance;
+	private double expectedClosingBalance;
+	private double totalNoPeriod;
+	private double interestInPeriod;
+	private double marginInPeriod;
+	private double tlpInPeriod;
+	private double totalRateInPeriod;
+	private double totMarginTlp;
+	
+	public GoalSeekInDao() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public GoalSeekInDao(double operningBalance, double expectedClosingBalance, double totalNoPeriod,
+			double interestInPeriod, double marginInPeriod, double tlpInPeriod, double totalRateInPeriod,
+			double totMarginTlp) {
+		super();
+		this.operningBalance = operningBalance;
+		this.expectedClosingBalance = expectedClosingBalance;
+		this.totalNoPeriod = totalNoPeriod;
+		this.interestInPeriod = interestInPeriod;
+		this.marginInPeriod = marginInPeriod;
+		this.tlpInPeriod = tlpInPeriod;
+		this.totalRateInPeriod = totalRateInPeriod;
+		this.totMarginTlp = totMarginTlp;
+	}
+
+	public double getOperningBalance() {
+		return operningBalance;
+	}
+
+	public void setOperningBalance(double operningBalance) {
+		this.operningBalance = operningBalance;
+>>>>>>> branch 'master' of https://github.com/sreejithmahe/GoalSeekFinder.git
 	}
 
 	public double getExpectedClosingBalance() {
