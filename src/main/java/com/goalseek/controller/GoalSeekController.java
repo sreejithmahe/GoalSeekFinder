@@ -30,12 +30,11 @@ public class GoalSeekController {
     }
 	@RequestMapping (method=RequestMethod.PUT, value="/goalseek")
 	public String updateGoalseek(@RequestBody GoalSeekOutDao gs) {
-		goalseekService.updateGoalseek(gs);
 		return "RequestMethod.PUT";
 	}
 	@RequestMapping (method=RequestMethod.POST, value="/goalseek")
-	public  String addGoalseek(@RequestBody GoalSeekOutDao gs) {
-		return "RequestMethod.POST";
+	public  List<GoalSeekOutDao> addGoalseek(@RequestBody GoalSeekInDao gs) {
+		return goalseekService.getGoalseek(gs);
 	}
 	@RequestMapping (method=RequestMethod.DELETE, value="/goalseek")
 	public String delGoalseek() {

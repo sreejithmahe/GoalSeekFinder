@@ -13,8 +13,9 @@ import com.goalseek.dao.GoalSeekOutDao;
 @Service
 public class ProduceResult {
 	
-	 private List<GoalSeekOutDao>  getJsonResultP = new ArrayList<GoalSeekOutDao>(); 
+	 
 	 public List<GoalSeekOutDao> M1(double OP1,double Guess,double ExpCB,double NP) {
+		  List<GoalSeekOutDao>  getJsonResultP = new ArrayList<GoalSeekOutDao>(); 
           double   Lfee1 = Guess;
           double IRPer1    = 0.06;
           double MarPer1   = 0.01;
@@ -52,11 +53,11 @@ public class ProduceResult {
           gs.setLeaseFee(+Math.round(Lfee1));
           gs.setPeriod(1);
           getJsonResultP.add(gs);
-          MN(CB1,Guess,ExpCB,NP);
+          MN(CB1,Guess,ExpCB,NP,getJsonResultP);
           return getJsonResultP;
     }
-	 public List<GoalSeekOutDao> MN(double OPn,double Guess,double ExpCB,double NP) {
-	      int Period =2;
+	 public List<GoalSeekOutDao> MN(double OPn,double Guess,double ExpCB,double NP, List<GoalSeekOutDao>  getJsonResultP) {
+		  int Period =2;
 	      double OPN = OPn;
 	      double  LfeeN = 0;
 	      double CBN = 0;
